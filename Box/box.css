@@ -1,7 +1,7 @@
 body{
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgba( 10, 10, 10, 0.829)
+    background-color: rgb(175, 12, 12)
 }
 
 .header{
@@ -9,7 +9,7 @@ body{
     justify-content: space-around;
     align-items: center;
     color: rgb(0, 0, 0);
-    border-bottom: 10px dashed red;
+    border-bottom: 10px dashed rgb(255, 255, 255);
 }
 
 .header h1 {
@@ -42,20 +42,42 @@ a{
 }
 
 .agora a{
-    color: rgb(182, 231, 47);
+    color: rgb(164, 219, 12);
 }
 
-.midle {
+.texto_centro div {
+    
    font-size: 30px;
    width: 500px;
-   justify-content: left;
+   margin-top: 150px;
    display: flex;
-   flex-direction: column;
+   justify-content: center;
    align-items: center;
 
 }
 
 .campo_cadastrar{
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.texto_centro{
+    
+    background-color: rgb(90, 88, 88);
+}
+
+.footer{
+    height: 150px;
+    border-bottom: 10px dashed rgb(255, 255, 255);
+    
+
+}
+
+.campo_login{
 
     align-items: center;
     justify-content: center;
