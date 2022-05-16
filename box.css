@@ -1,33 +1,53 @@
 body{
-    
+        
     margin: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(175, 12, 12)
+    background-color: rgb(175, 12, 12);
+    background-size: cover;
 }
+
 
 .header{
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: rgb(0, 0, 0);
-    border-bottom: 10px dashed rgb(255, 255, 255);
+    border: 7px dashed rgb(255, 255, 255);
+}
+
+@keyframes pneu {
+
+     0% {
+    transform: rotate(-1800deg)
+  }
+  100% {
+    transform: rotate(3600deg)}
+}
+
+.pneu{
+
+
+    animation-name: pneu;
+    position: relative;
+    animation-direction: alternate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+    
 }
 
 @keyframes lista {
-    0%   {background-color: red;}
-    25%  {background-color: rgb(223, 243, 255);}
-    50%  {background-color: rgb(79, 79, 80);}
-    100% {background-color: rgb(49, 41, 48);}
+    50%   {background-color: rgb(240,160,40);}
   }
   
   
   .header ul {
     width: 100px;
     height: 100px;
-    background-color: red;
     animation-name: lista;
-    animation-duration: 8s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
+    border: 5px solid rgb(0, 0, 0)
 ;
 
   }
@@ -47,10 +67,10 @@ body{
 }
 
 .container1 ul{
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 400px;
     text-decoration: none;
@@ -93,8 +113,23 @@ a{
 
 .footer{
     height: 150px;
-    border-bottom: 10px dashed rgb(255, 255, 255);
+    border-bottom: 7px dashed rgb(255, 255, 255);
     
+
+}
+
+.aplicativos{
+
+
+    font-size: 13px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.aplicativos h3{
+
+    
+    width: 100px;
 
 }
 
