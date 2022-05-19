@@ -111,13 +111,26 @@ a{
 .campo_cadastrar{
     
     /* Ajuste da imagem da tela de cadastro */
+    
     padding-top: 158px;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 30px;
 }
+
+.campo_cadastrar div{
+    
+    background-color: rgba(255, 55, 30, 0.692);
+    justify-content: space-evenly;
+    height: 180px;
+    width: 200px;
+    margin: 1%;
+    padding: 2%;
+    border-radius: 20%;
+}
+
 
 .texto_centro{
     
@@ -136,10 +149,10 @@ a{
 .aplicativos{
 
     display: flex;
-    
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
     font-size: 13px;
-    justify-content: space-evenly;
+    
 }
 
 .aplicativos h3{
@@ -165,4 +178,15 @@ a{
     justify-content: space-evenly;
     padding: 10%;
     border: 10px;
+}
+
+.campo_login div{
+
+    background-color: rgba(255, 55, 30, 0.692);
+    justify-content: space-evenly;
+    height: 100px;
+    width: 200px;
+    margin: 5%;
+    padding: 10%;
+    border-radius: 10%;
 }
