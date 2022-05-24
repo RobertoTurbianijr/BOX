@@ -53,7 +53,9 @@ body{
   }
   
 .header h1 {
-    font-size: 58px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 40px;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
 }
@@ -64,6 +66,17 @@ body{
     width: 800px;
     text-decoration: none;
     list-style: none;
+}
+
+.header .lista{
+  display: flex;
+  width: 625px;
+  text-decoration: none;
+  list-style: none;
+  font-size: 14px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .lista ul{
@@ -168,8 +181,6 @@ a{
     justify-content: space-around;
 
 }
-
-
 
 .campo_login{
 

@@ -5,50 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="box.css">
+    <link rel="stylesheet" href="cadastro.css">
 
     <script src="./js/funcoes.js"></script>
 
 </head>
 <body>
 
-    <div class="cadastro">
-        <div class="header">
-            <img src="https://www.gran-turismo.com/gtsport/decal/7350469505122862080_1.png?5e486a1dbe56448e7a2x" height="125px" width="170px" class="pneu">
-            <h1>BOX BOX</h1>
 
-        <div class="lista">
-            <ul>
-                <li> <a href="inicio.html"> Inicio</a></li>
-                <li> <a href=""> Sobre nós</a> </li>
-                <li> <a href=""> Nosso proposito</a></li>
-                <li>|</li>
-                <li> <a href="login.html">Login</a></li>
-                <li class="agora"> <a href="#">Cadastrar</a></li>
-            </ul>
+  
+ 
+<div class="backRight"></div>
+<div class="backLeft">
+</div>
+  
+  <div id="slideBox">
+    <div class="topLayer">
+      <div class="left">
+        <div class="content">
+            <div class="form-group">
+            </div>    
         </div>
-    </div>
+      </div>
 
-    
-    <center class="campo_cadastrar">
-        <div>
-        Nome
-        <input id="nome_input" placeholder="Nome">
-        Email
-        <input id="email_input" placeholder="Email">
-        Senha
-        <input id="senha_input" type="password" placeholder="*****">
-       Confirmar Senha
-        <input id="confirmacao_senha_input" type="password" placeholder="*****">
+      
+
+      <div class="right">
+        <span class="header">
+          <ul class="lista">
+            <img src="https://www.gran-turismo.com/gtsport/decal/7350469505122862080_1.png?5e486a1dbe56448e7a2x" height="98px" width="130px" class="pneu">
+          <h1>BOXBOX</h1>
+          <li> <a href="index.html"> Inicio</a></li>
+          <li> <a href=""> Sobre nós</a> </li>
+          <li> <a href=""> Nosso proposito</a></li>
+          <li>|</li>
+          <li> <a href="login.html">Login</a></li>
+          <li class="agora"><a href="#">Cadastrar</a></li>
+      </ul>
+    </span>
+        <div class="content">
+          <h2>Cadastro</h2>
+            <div class="form-group">
+              <input id="nome_input" placeholder="Nome">
+              <input id="email_input" placeholder="Email">
+              <input id="senha_input" type="password" placeholder="*****">
+              <input id="confirmacao_senha_input" type="password" placeholder="*****">
+            </div>
+            <button onclick="cadastrar()">Cadastrar</button>
+            <div class="aplicativos">
+                <a href="https://web.whatsapp.com/">
+                    <img src="https://i0.wp.com/multarte.com.br/wp-content/uploads/2018/11/whatsapp-logo-icone.png?fit=1527%2C1563&ssl=1" height="50px" width="50px">
+                    </a>
+                    <a href="https://pt-br.facebook.com/">
+                        <img src="https://www.ovenglove.net/wp-content/uploads/2020/07/facebook.jpg" height="50px" width="50px">
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <img src="https://www.gatewayspesach.org/wp-content/uploads/2019/08/600px-Instagram_logo_2016.svg_-540x540.png" height="50px" width="50px">
+                    </a>
+                </div>
         </div>
-        <button onclick="cadastrar()">Cadastrar</button>
-    </center>
-
-
-
-    <div id="div_erros_login">
-
+      </div>
     </div>
+  </div>
        
     <div class="aplicativos">
         
@@ -68,6 +86,7 @@
 </body>
 </html>
 <script>
+// <button onclick="cadastrar()">Cadastrar</button>
     function cadastrar() {
         aguardar();
 
