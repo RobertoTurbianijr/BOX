@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/login.css">
+
+  <script src="./js/funcoes.js"></script>
+
+</head>
+<body>
+
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
+        </div>
+
+    <div class="fundoEsquerdo">
+
+        
+    </div>
+
+
+    <div class="fundoDireito">        
+        <div>
+            <div>
+                <ul class="lista">
+                    <img src="https://www.gran-turismo.com/gtsport/decal/7350469505122862080_1.png?5e486a1dbe56448e7a2x" height="98px" width="130px" class="pneu">
+                    <h1>BOXBOX</h1>
+                    <li> <a href="index.html"> Inicio</a></li>
+                    <li> <a href=""> Sobre nós</a> </li>
+                    <li class="agora"><a href="#">Login</a></li>
+                    <li><a href="cadastro.html">Cadastrar</a></li>
+                </ul>
+            </div>
+        </div> 
+        
+        <div class="container">
+            <div class="campo">
+                <h2>Login</h2>
+                <input id="email_input" placeholder="Email">
+                <input id="senha_input" type="password" placeholder="*****">
+                <button onclick="entrar()">Entrar</button>
+            </div>
+        </div>
+            
+    </div>
+
+    <div style="display: none;" id="div_aguardar" class="loading-div">
+        <img src="./assets/circle-loading.gif" id="loading-gif">
+    </div>
+
+    <div id="div_erros_login">
+
+    </div>
+            
+            
+<!--            
+            
+         
+         
+            <div class="aplicativos">
+              <a href="https://web.whatsapp.com/">
+                  <img src="https://i0.wp.com/multarte.com.br/wp-content/uploads/2018/11/whatsapp-logo-icone.png?fit=1527%2C1563&ssl=1" height="50px" width="50px">
+                  </a>
+                  <a href="https://pt-br.facebook.com/">
+                      <img src="https://www.ovenglove.net/wp-content/uploads/2020/07/facebook.jpg" height="50px" width="50px">
+                  </a>
+                  <a href="https://www.instagram.com/">
+                      <img src="https://www.gatewayspesach.org/wp-content/uploads/2019/08/600px-Instagram_logo_2016.svg_-540x540.png" height="50px" width="50px">
+                  </a>
+              </div>
+       -->
+     
+</body>      
+</html>
+<script>
+
+
+    function entrar() {
+        aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>
