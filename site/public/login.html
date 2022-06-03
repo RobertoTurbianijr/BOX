@@ -17,17 +17,13 @@
             <span id="mensagem_erro"></span>
         </div>
 
-    <div class="fundoEsquerdo">
-
-        
-    </div>
-
-
     <div class="fundoDireito">        
         <div>
             <div>
                 <ul class="lista">
-                    <img src="https://www.gran-turismo.com/gtsport/decal/7350469505122862080_1.png?5e486a1dbe56448e7a2x" height="98px" width="130px" class="pneu">
+                   <div class="">
+                       <img src="https://www.gran-turismo.com/gtsport/decal/7350469505122862080_1.png?5e486a1dbe56448e7a2x" height="98px" width="130px" class="pneu">
+                   </div>
                     <h1>BOXBOX</h1>
                     <li> <a href="index.html"> Inicio</a></li>
                     <li> <a href=""> Sobre nós</a> </li>
@@ -41,7 +37,9 @@
             <div class="campo">
                 <h2>Login</h2>
                 <input id="email_input" placeholder="Email">
+                <br>
                 <input id="senha_input" type="password" placeholder="*****">
+                <br>
                 <button onclick="entrar()">Entrar</button>
             </div>
         </div>
@@ -52,10 +50,16 @@
         <img src="./assets/circle-loading.gif" id="loading-gif">
     </div>
 
+    <div class="fundoEsquerdo">
+
+        
+    </div>
+
     <div id="div_erros_login">
 
     </div>
             
+    
             
 <!--            
             
@@ -87,7 +91,7 @@
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            alert  ("Mensagem de erro para todos os campos em branco");
             finalizarAguardar();
             return false;
         }
