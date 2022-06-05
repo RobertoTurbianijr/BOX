@@ -1,0 +1,23 @@
+body{
+
+    background-image: url(https://www.formula1.com/content/dam/fom-website/sutton/2019/AbuDhabi/Sunday/MT015725_2019120131500157.jpg.transform/6col-retina/image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.botoes{
+
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+
+}
+
+.menu1{
+
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}

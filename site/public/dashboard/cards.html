@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AcquaTec | Tempo Real</title>
+    <title>BOXBOX</title>
+    <link rel="stylesheet" href="">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="card box.css">
     <link rel="stylesheet" href="dashboards.css">
-
+    
     <script src="../js/funcoes.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -22,101 +23,69 @@
 
     <div class="janela">
 
-
-        <div class="header-left dash-header">
-
-            <h1>AcquaTec</h1>
-
-            <div class="hello">
+ <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
 
-            <div class="btn-nav">
-                <h3>Aquários</h3>
-            </div>
 
-            <div class="btn-nav-white">
+         <div id="div_pil" class="botoes">
+
+          <h3 id="h3_pilot" onclick="piloto()" style="display: block;"> <a href="#">Pilotos</a>
+            <div id="div_menu_pilotos" class="menu1" style="display: none;">
+              <h3 id="h3_ham" onclick="hamilton()"><a href="#">Hamiltom</a></h3>
+              <h3 id="h3_max" onclick="max()" ><a href="#">Max</a></h3>
+              <h3 id="h3_cha" onclick="Charles()" ><a href="#">Charles</a></h3>
+              <h3 id="h3_rus" onclick="russel()" ><a href="#">Russel</a></h3>
+              <h3 id="h3_per" onclick="perez()" ><a href="#">Perez</a></h3>
+              <h3 id="h3_san" onclick="sainz()" ><a href="#">Sainz</a></h3>
+              <h3 id="h3_gas" onclick="gasly()" ><a href="#">Gasly</a></h3>
+              <h3 id="h3_tsu" onclick="tsunoda()" ><a href="#">Tsunoda</a></h3>
+              <h3 id="h3_alo" onclick="alonso()" ><a href="#">Alonso</a></h3>
+              <h3 id="h3_oco" onclick="ocon()" ><a href="#">Ocon</a></h3>
+              <h3 id="h3_vet" onclick="vettel()" ><a href="#">Vettel</a></h3>
+              <h3 id="h3_str" onclick="stroll()" ><a href="#">Stroll</a></h3>
+              <h3 id="h3_nor" onclick="norris()" ><a href="#">Norris</a></h3>
+              <h3 id="h3_ric" onclick="ricciardo()" ><a href="#">Ricciardo</a></h3>
+              <h3 id="h3_alb" onclick="albon()" ><a href="#">Albon</a></h3>
+              <h3 id="h3_sch" onclick="schumacher()" ><a href="#">Schumacher</a></h3>
+              <h3 id="h3_lat" onclick="latifi()" ><a href="#">Latifi</a></h3>
+              <h3 id="h3_mag" onclick="magnusen()" ><a href="#">Magnusen</a></h3>
+              <h3 id="h3_zho" onclick="zhou()"><a href="#">Zhou</a></h3>      
+            </div>  
+            </h3>
+        </div>       
+
+            <div id="div_cur" class="btn-nav-white">
                 <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
+                    <h3>Curiosidades</h3>
                 </a>
             </div>
 
-            <div class="btn-nav-white">
+            <div id="div_mural" class="btn-nav-white">
                 <a href="./mural.html">
                     <h3>Mural de Avisos</h3>
                 </a>
             </div>
 
-            <div class="btn-logout" onclick="limparSessao()">
+            <div id="div_sair" class="btn-logout" onclick="limparSessao()">
                 <h3>Sair</h3>
             </div>
 
         </div>
 
-        <div class="dash">
-            <div class="regua">
-                <div class="item-regua perigo-frio">
-                    <h4>Perigo</h4>
-                    <h2>0°C</h2>
-                </div>
-                <div class="item-regua alerta-frio">
-                    <h4>Alerta</h4>
-                    <h2>0°C</h2>
-                </div>
-                <div class="item-regua ideal">
-                    <h4>Ideal</h4>
-                    <h2>0°C</h2>
-                </div>
-                <div class="item-regua alerta-quente">
-                    <h4>Alerta</h4>
-                    <h2>0°C</h2>
-                </div>
-                <div class="item-regua perigo-quente">
-                    <h4>Perigo</h4>
-                    <h2>0°C</h2>
-                </div>
-            </div>
-
-            <div class="cards">
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_1">-°C</p>
-                    </div>
-                    <div class="cor-alerta" id="card_1"></div>
-                </div>
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_2">-°C</p>
-                    </div>
-                    <div class="cor-alerta" id="card_2"></div>
-
-                </div>
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_3">-°C</p>
-                    </div>
-                    <div class="cor-alerta ideal" id="card_3"></div>
-                </div>
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_4">-°C</p>
-                    </div>
-                    <div class="cor-alerta" id="card_4"></div>
-                </div>
-
-            </div>
-
-        </div>
+   
     </div>
-
-
+    
 </body>
 
 <script>
+    
+    function piloto() {
+        div_cur.style="display: none;"
+        div_mural.style="display: none;"
+        div_menu_pilotos.style="display: block;"
+        div_sair.style="display: block;"
+    }
 
     function atualizacaoPeriodica() {
         obterdados(1);
