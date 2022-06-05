@@ -19,7 +19,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), atualizacaoPeriodica()">
+<!-- <body onload="validarSessao(), atualizacaoPeriodica()"> parte da api carregando arduino -->
 
     <div class="janela">
 
@@ -483,15 +483,16 @@
                     </p>
                 </span>
             </div>  
-            </h3>
+          </h3>
         </div>       
 
+        <div id="div_eqp">
 
-        <h3 id="h3_equip" onclick="equip()" style="display: block;"> <a href="#" style="color: white;">Equipes</a>
-        <div id="div_menu_equipes" class="menu2" style="display: none;">
+            <h3 id="h3_equip" onclick="equip()" style="display: block;"> <a href="#" style="color: white;">Equipes</a>
+                <div id="div_menu_equipes" class="menu2" style="display: none;">
 
             <span>
-
+                
                 <h3 id="h3_mercedes" onclick="mercedes()"> <a href="#">Mercedes</a> </h3>
                 <p id="p_mer" style="display: none;">
 
@@ -532,7 +533,7 @@
 
                     Sede
                     A equipe foi inicialmente baseado em Modena desde a sua fundação e pré-guerra até 1943, quando Enzo Ferrari mudou a equipe para uma nova fábrica em Maranello em 1947, e ambos a Scuderia e a fabrica Ferrari permanecem em Maranello até hoje. A equipe possui e opera uma pista de testes no mesmo local, o Circuito de Fiorano construído em 1972, que é usado para testar carros de rua e de corrida.
-
+                    
                     Nome e Logotipo
                     A equipe tem o nome de seu fundador, Enzo Ferrari. O cavalo rampante era o símbolo do avião do piloto Francesco Baracca, morto na I Guerra Mundial, e logo depois tornou-se o logotipo da Ferrari depois de os pais do aviador, bons amigos de Enzo Ferrari, pedirem-lhe para continuar sua tradição de cavaleirismo, desportivismo e ousadia.
 
@@ -581,7 +582,7 @@
                     Em 2010, com um campeonato bastante equilibrado, a equipe esteve bem perto de conseguir o título, com a estreia do espanhol Fernando Alonso, que terminou o campeonato a quatro pontos de Sebastian Vettel.
 
                     Em 2014, Kimi Räikkönen retornou para a equipe, assumindo o lugar de Felipe Massa, que foi para Williams. Sebastian Vettel foi anunciado como piloto da Ferrari para 2015, substituindo o espanhol Fernando Alonso. Maurizio Arrivabene substituiu Marco Mattiaci no comando da equipe em novembro de 2014.
-
+                    
                     Em 2015, a equipe conseguiu três vitórias na temporada (Malásia, Hungria e Singapura com Sebastian Vettel) e incluindo também uma pole position (Vettel em Singapura).
 
                     Em 2017, a equipe conseguiu cinco vitórias na temporada (Austrália, Barém, Mônaco, Hungria e Brasil, todas de Vettel) e incluindo também cinco pole positions (Vettel nas etapas da Rússia, Hungria, Singapura e México, e Räikkönen em Mônaco).
@@ -589,7 +590,7 @@
                     Em 2018, a equipe conseguiu seis vitórias na temporada (Austrália, Barém, Canadá, Grã-Bretanha e Bélgica de Vettel e Estados Unidos de Raikkonen).
 
                     Em 2019, Charles Leclerc assumiu no lugar de Raikkonen e a equipe conseguiu três vitórias na temporada (Bélgica e Itália com Leclerc e Singapura com Vettel) e incluindo também nove pole position (Barém, Áustria, Bélgica, Itália, Singapura, Rússia e México com Leclerc e Canadá e Japão com Vettel).
-
+                    
                     Década de 2020
                     Em 2021, Carlos Sainz Jr. assumiu no lugar de Vettel.
                 </p>
@@ -618,7 +619,7 @@
                     Ron Dennis se aposentou como diretor da equipe McLaren em 2009, entregando-se ao antigo funcionário da McLaren, Martin Whitmarsh. No final de 2013, após a pior temporada da equipe desde 2004, Whitmarsh foi expulso. A McLaren anunciou em 2013 que usaria motores Honda a partir de 2015, substituindo a Mercedes-Benz. A equipe correu como McLaren Honda pela primeira vez desde 1992 no Grande Prêmio da Austrália de 2015. Em setembro de 2017, a McLaren anunciou que havia concordado com o fornecimento de motores com a Renault de 2018 a 2020. A McLaren está usando motores Mercedes-Benz da temporada 2021 até pelo menos 2024. 
 
                     Depois de inicialmente retornar às 500 Indianápolis em 2017 como apoiador da Andretti Autosport para executar Fernando Alonso e depois em 2019 como uma entrada independente, a McLaren anunciou em agosto de 2019 que correria em conjunto com a Arrow Schmidt Peterson Motorsports a partir de 2020 para executar a IndyCar Series completa, sendo a entrada combinada chamada Arrow McLaren SP. Inicialmente sem participação na equipe, a McLaren compraria 75% da operação em 2021. 
-                                
+                    
                 </p>
 
                 <h3 id="h3_alpine" onclick="alpine()"> <a href="#">Alpine</a> </h3>
@@ -654,7 +655,7 @@
                 <p id="p_alfa" style="display: none;">
 
                     A fabricante italiana de motores Alfa Romeo participou muitas vezes da Fórmula 1. Atualmente participa como Alfa Romeo F1 Team Orlen enquanto é operado pela Sauber Motorsport AG. A marca competiu no automobilismo como construtora e fornecedora de motores esporadicamente entre 1950 e 1987, e mais tarde como parceira comercial desde 2015. Os pilotos da empresa venceram os dois primeiros Campeonatos Mundiais de Pilotos na Alfetta pré-guerra: Nino Farina em 1950 e Juan Manuel Fangio em 1951. Após esses sucessos, a Alfa Romeo se retirou da Fórmula 1.
-
+                    
                     Durante a década de 1960, embora a empresa não tivesse presença oficial no topo do automobilismo, várias equipes de Fórmula 1 usaram motores Alfa Romeo desenvolvidos de forma independente para alimentar seus carros. No início da década de 1970, a Alfa forneceu suporte para a Fórmula 1 para seu piloto de trabalho Andrea de Adamich, fornecendo versões adaptadas de seu motor V8 de 3 litros do carro esportivo Alfa Romeo Tipo 33/3 para alimentar as entradas da McLaren (1970) e março (1971) de Adamich. Nenhuma dessas combinações de motores marcou pontos no campeonato.
 
                     Em meados da década de 1970, o engenheiro da Alfa Carlo Chiti projetou um motor flat-12 para substituir o T33 V8, que obteve algum sucesso na conquista do Campeonato Mundial de Esportes de 1975. Bernie Ecclestone, então dono da equipe Brabham de Fórmula 1, convenceu a Alfa Romeo a fornecer este motor gratuitamente para a temporada de 1976 da Fórmula 1. Embora a primeira temporada da Brabham-Alfa Romeo tenha sido relativamente modesta, durante os Campeonatos Mundiais de 1977 e 1978 seus carros tiveram 14 pódios, incluindo duas vitórias em corridas para Niki Lauda.
@@ -671,13 +672,13 @@
 
                 <h3 id="h3_haas" onclick="haas()"> <a href="#">Haas</a> </h3>
                 <p id="p_haas" style="display: none;">
-
+                    
                     Haas Formula LLC, competindo como Haas F1 Team, é uma equipe de fórmula 1 americana estabelecida pelo coproprietário da equipe NASCAR Cup Series Gene Haas em abril de 2014. A equipe originalmente pretendia fazer sua estreia no início da temporada de 2015 , mas depois optou por adiar sua entrada até a temporada de 2016. O diretor da equipe Haas F1 é Guenther Steiner.
-
+                    
                     A equipe está sediada em Kannapolis, Carolina do Norte, Estados Unidos – 31 mi (50 km) de Charlotte – ao lado da equipe irmã e da participante da NASCAR Stewart-Haas Racing, embora as duas equipes sejam entidades separadas. A equipe também estabeleceu uma base av
 
                     A Haas foi a primeira construtora americana a apresentar uma entrada na F-1 após o fracassado projeto da F-1 nos EUA em 2010, e é a primeira construtora americana a competir desde que a equipe não relacionada Haas Lola correu nas temporadas de 1985 e 1986. A equipe Haas Lola pertencia ao ex-chefe da McLaren Teddy Mayer e Carl Haas, que não era parente de Gene Haas.
-
+                    
                     Após o colapso da Marussia F1 durante a temporada de 2014 e o leilão de seus ativos, a Haas comprou a sede da equipe em Banbury para servir como base avançada para suas operações. 
 
                     Sem restrições com os regulamentos de testes até o momento em que a equipe realmente entrou na Fórmula 1, a Haas abalou seu novo carro em dezembro de 2015 antes dos testes oficiais de pré-temporada em Barcelona no início de 2016. A Haas se aproximou do fabricante italiano Dallara para construir seu chassi, com uma unidade de potência fornecida pela Ferrari. O ex-diretor técnico da Jaguar e red Bull Racing Guenther Steiner é o diretor da equipe. A Haas confirmou que seu novo carro passou nos testes obrigatórios de colisão da FIA em janeiro de 2016. 
@@ -734,11 +735,166 @@
 
                     Para a temporada de 2021, a AlphaTauri manteve Pierre Gasly e contratou o japonês Yuki Tsunoda para substituir o russo Daniil Kvyat. Gasly conquistou o primeiro pódio da equipe no ano, ao garantir o terceiro lugar no Grande Prêmio do Azerbaijão.[
                 </p>
+              </span>
+            
+            </div>   
+        </h3>
+    </div>
+</div>
+
+
+<div id="div_pista">
+
+    <h3 id="h3_pista" onclick="pista()" style="display: block;"><a href="#" style="color:white;">Pistas</a></h3>
+        <div id="div_menu_pistas" class="menu3" style="display: none;">
+            <span>
+
+                <h3 id="h3_bahrein" onclick="bahrein()"><a href="#">Bahrein</a></h3>
+                <p id="p_bahrein" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_arabia saudita" onclick="arabia()"><a href="#">Arábia Saudita</a></h3>
+                <p id="p_arabia" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_australia" onclick="australia()"><a href="#">Austrália</a></h3>
+                <p id="p_australia" style="display: none;">
+                
+                </p>
+
             </span>
 
+            <span>
+    
+                <h3 id="h3_emilia" onclick="emilia()"><a href="#">Emilia-Romagna</a></h3>
+                <p id="p_emilia" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_miami" onclick="miami()"><a href="#">Miami</a></h3>
+                <p id="p_miami" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_espanha" onclick="espanha()"><a href="#">Espanha</a></h3>
+                <p id="p_espanha" style="display: none;">
+                
+                </p>
+            
+            </span>
 
-            </h3>
-        </div>
+            <span>
+
+                
+                <h3 id="h3_monaco" onclick="monaco()"><a href="#">Mônaco</a></h3>
+                <p id="p_monaco" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_azerbaijao" onclick="azerbaijao()"><a href="#">Azerbaijão</a></h3>
+                <p id="p_azerbaijao" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_canada" onclick="canada()"><a href="#">Canadá</a></h3>
+                <p id="p_canada" style="display: none;">
+                
+                </p>
+            
+            </span>
+
+            <span>
+
+                
+                <h3 id="h3_inglaterra" onclick="inglaterra()"><a href="#">Inglaterra</a></h3>
+                <p id="p_inglaterra" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_austria" onclick="austria()"><a href="#">Áustria</a></h3>
+                <p id="p_austria" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_franca" onclick="franca()"><a href="#">França</a></h3>
+                <p id="p_franca" style="display: none;">
+                
+                </p>
+            
+            </span>
+
+            <span>
+
+                <h3 id="h3_hungria" onclick="hungria()"><a href="#">Hungria</a></h3>
+                <p id="p_hungria" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_belgica" onclick="belgica()"><a href="#">Bélgica</a></h3>
+                <p id="p_belgica" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_holanda" onclick="holanda()"><a href="#">Holanda</a></h3>
+                <p id="p_holanda" style="display: none;">
+                
+                </p>
+            
+            </span>
+
+            <span>
+
+                <h3 id="h3_italia" onclick="italia()"><a href="#">Itália</a></h3>
+                <p id="p_italia" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_singapura" onclick="singapura()"><a href="#">Singapura</a></h3>
+                <p id="p_singapura" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_japao" onclick="japao()"><a href="#">Japão</a></h3>
+                <p id="p_japao" style="display: none;">
+                
+                </p>
+            
+            </span>
+
+            <span>
+
+                <h3 id="h3_	eua" onclick="eua()"><a href="#">EUA</a></h3>
+                <p id="p_eua" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_mexico" onclick="mexico()"><a href="#">México</a></h3>
+                <p id="p_mexico" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_sao_paulo" onclick="paulo()"><a href="#">São Paulo</a></h3>
+                <p id="p_São_Paulo" style="display: none;">
+                
+                </p>
+                
+                <h3 id="h3_abu " onclick="abu()"><a href="#">Abu Dhabi</a></h3>
+                <p id="p_abu " style="display: none;">
+                
+                </p>
+                
+            </span>
+                
+            </div>
+</div>
+
+
+    <span>
+        
+        <h3 id="h3_mercedes" onclick="mercedes()"> <a href="#">Mercedes</a> </h3>
+        <p id="p_mer" style="display: none;">
 
 
 
@@ -780,6 +936,8 @@
         div_mural.style="display: block;"
         div_menu_pilotos.style="display: block;"
         div_sair.style="display: block;"
+        div_menu_equipes.style="display: none;"
+
     }
 
     function hamilton() {
@@ -1365,22 +1523,29 @@
     }
 
 
+
 function equip() {
     
         div_cur.style="display: block;"
         div_mural.style="display: block;"
         div_menu_equipes.style="display: block;"
         div_sair.style="display: block;"   
+        div_menu_pilotos.style="display: none;"
+
 
 }
 
 
+
 function mercedes () {
-    
+
+    div_sair.style="display: none;"
+    div_cur.style="display: block;"
+    div_mural.style="display: block;"
     div_menu_equipes.style="display: none;"
     h3_williams.style="display: none"
     h3_alpha.style="display: none"
-    h3_hass.style="display: none"
+    h3_haas.style="display: none"
     h3_aston.style="display: none"
     h3_alpine.style="display: none"
     h3_mclaren.style="display: none"
@@ -1394,10 +1559,14 @@ function mercedes () {
 
 function haas () {
     
+    
+    div_sair.style="display: none;"
+    div_cur.style="display: block;"
+    div_mural.style="display: block;"
     div_menu_equipes.style="display: none;"
     h3_williams.style="display: none"
     h3_alpha.style="display: none"
-    h3_hass.style="display: none"
+    h3_haas.style="display: none"
     h3_aston.style="display: none"
     h3_alpine.style="display: none"
     h3_mclaren.style="display: none"
@@ -1413,10 +1582,14 @@ function haas () {
 
 function aston () {
     
+    
+    div_sair.style="display: none;"
+    div_cur.style="display: block;"
+    div_mural.style="display: block;"
     div_menu_equipes.style="display: none;"
     h3_williams.style="display: none"
     h3_alpha.style="display: none"
-    h3_hass.style="display: none"
+    h3_haas.style="display: none"
     h3_aston.style="display: none"
     h3_alpine.style="display: none"
     h3_mclaren.style="display: none"
@@ -1430,10 +1603,14 @@ function aston () {
 
 function williams () {
 
+    
+    div_sair.style="display: none;"
+    div_cur.style="display: block;"
+    div_mural.style="display: block;"
     div_menu_equipes.style="display: none;"
     h3_williams.style="display: none"
     h3_alpha.style="display: none"
-    h3_hass.style="display: none"
+    h3_haas.style="display: none"
     h3_aston.style="display: none"
     h3_alpine.style="display: none"
     h3_mclaren.style="display: none"
@@ -1447,10 +1624,14 @@ function williams () {
 
 function alpha () {
     
+    
+    div_sair.style="display: none;"
+    div_cur.style="display: block;"
+    div_mural.style="display: block;"
     div_menu_equipes.style="display: none;"
     h3_williams.style="display: none"
     h3_alpha.style="display: none"
-    h3_hass.style="display: none"
+    h3_haas.style="display: none"
     h3_aston.style="display: none"
     h3_alpine.style="display: none"
     h3_mclaren.style="display: none"
@@ -1464,10 +1645,14 @@ function alpha () {
 
 function mclaren () {
     
+    
+    div_sair.style="display: none;"
+    div_cur.style="display: block;"
+    div_mural.style="display: block;"
     div_menu_equipes.style="display: none;"
     h3_williams.style="display: none"
     h3_alpha.style="display: none"
-    h3_hass.style="display: none"
+    h3_haas.style="display: none"
     h3_aston.style="display: none"
     h3_alpine.style="display: none"
     h3_mclaren.style="display: none"
@@ -1481,10 +1666,14 @@ function mclaren () {
 
 function ferrari () {
 
+    
+    div_sair.style="display: none;"
+    div_cur.style="display: block;"
+    div_mural.style="display: block;"
     div_menu_equipes.style="display: none;"
     h3_williams.style="display: none"
     h3_alpha.style="display: none"
-    h3_hass.style="display: none"
+    h3_haas.style="display: none"
     h3_aston.style="display: none"
     h3_alpine.style="display: none"
     h3_mclaren.style="display: none"
@@ -1498,10 +1687,14 @@ function ferrari () {
 
 function alpine () {
     
+    
+    div_sair.style="display: none;"
+    div_cur.style="display: block;"
+    div_mural.style="display: block;"
     div_menu_equipes.style="display: none;"
     h3_williams.style="display: none"
     h3_alpha.style="display: none"
-    h3_hass.style="display: none"
+    h3_haas.style="display: none"
     h3_aston.style="display: none"
     h3_alpine.style="display: none"
     h3_mclaren.style="display: none"
@@ -1515,10 +1708,14 @@ function alpine () {
 
 function alfa () {
     
+    
+    div_sair.style="display: none;"
+    div_cur.style="display: block;"
+    div_mural.style="display: block;"
     div_menu_equipes.style="display: none;"
     h3_williams.style="display: none"
     h3_alpha.style="display: none"
-    h3_hass.style="display: none"
+    h3_haas.style="display: none"
     h3_aston.style="display: none"
     h3_alpine.style="display: none"
     h3_mclaren.style="display: none"
@@ -1532,10 +1729,14 @@ function alfa () {
 
 function redbull () {
     
+    
+    div_sair.style="display: none;"
+    div_cur.style="display: block;"
+    div_mural.style="display: block;"
     div_menu_equipes.style="display: none;"
     h3_williams.style="display: none"
     h3_alpha.style="display: none"
-    h3_hass.style="display: none"
+    h3_haas.style="display: none"
     h3_aston.style="display: none"
     h3_alpine.style="display: none"
     h3_mclaren.style="display: none"
@@ -1548,102 +1749,104 @@ function redbull () {
 }
 
 
-    function atualizacaoPeriodica() {
-        obterdados(1);
-        obterdados(2);
-        obterdados(3);
-        obterdados(4);
+    // funcções da api
 
-        function sendData() {
-			var http = new XMLHttpRequest();
-			http.open('POST', 'http://localhost:3000/api/sendData', false);
-			http.send(null);
-		}
+    // function atualizacaoPeriodica() {
+    //     obterdados(1);
+    //     obterdados(2);
+    //     obterdados(3);
+    //     obterdados(4);
 
-        setInterval(() => {
-			sendData();
-		}, 2000);
-        setTimeout(atualizacaoPeriodica, 5000);
-    }
+    //     function sendData() {
+	// 		var http = new XMLHttpRequest();
+	// 		http.open('POST', 'http://localhost:3000/api/sendData', false);
+	// 		http.send(null);
+	// 	}
 
-    function obterdados(idAquario) {
-        fetch(`/medidas/tempo-real/${idAquario}`)
-            .then(resposta => {
+    //     setInterval(() => {
+	// 		sendData();
+	// 	}, 2000);
+    //     setTimeout(atualizacaoPeriodica, 5000);
+    // }
 
-                if (resposta.ok) {
-                    resposta.json().then(resposta => {
+    // function obterdados(idAquario) {
+    //     fetch(`/medidas/tempo-real/${idAquario}`)
+    //         .then(resposta => {
 
-                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+    //             if (resposta.ok) {
+    //                 resposta.json().then(resposta => {
 
-                        var dados = {
-                            temperatura: resposta[0].temperatura,
-                        }
+    //                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
 
-                        alertar(resposta[0].temperatura, idAquario);
-                    });
-                } else {
+    //                     var dados = {
+    //                         temperatura: resposta[0].temperatura,
+    //                     }
 
-                    console.error('Nenhum dado encontrado ou erro na API');
-                }
-            })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
-            });
+    //                     alertar(resposta[0].temperatura, idAquario);
+    //                 });
+    //             } else {
 
-    }
+    //                 console.error('Nenhum dado encontrado ou erro na API');
+    //             }
+    //         })
+    //         .catch(function (error) {
+    //             console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
+    //         });
 
-    function alertar(temperatura, idAquario) {
-        var limites = {
-            muito_quente: 23,
-            quente: 22,
-            ideal: 20,
-            frio: 10,
-            muito_frio: 5
-        };
+    // }
 
-        var classe_temperatura = 'cor-alerta';
+    // function alertar(temperatura, idAquario) {
+    //     var limites = {
+    //         muito_quente: 23,
+    //         quente: 22,
+    //         ideal: 20,
+    //         frio: 10,
+    //         muito_frio: 5
+    //     };
 
-        if (temperatura >= limites.muito_quente) {
-            classe_temperatura = 'cor-alerta perigo-quente';
-            console.log("caiu no 1")
-        }
-        else if (temperatura < limites.muito_quente && temperatura >= limites.quente) {
-            classe_temperatura = 'cor-alerta alerta-quente';
-            console.log("caiu no 2")
-        }
-        else if (temperatura < limites.quente && temperatura > limites.frio) {
-            classe_temperatura = 'cor-alerta ideal';
-            console.log("caiu no 3")
-        }
-        else if (temperatura <= limites.frio && temperatura > limites.muito_frio) {
-            classe_temperatura = 'cor-alerta alerta-frio';
-            console.log("caiu no 4")
-        }
-        else if (temperatura < limites.min_temperatura) {
-            classe_temperatura = 'cor-alerta perigo-frio';
-            console.log("caiu no 5")
-        }
+    //     var classe_temperatura = 'cor-alerta';
 
-        var card;
+    //     if (temperatura >= limites.muito_quente) {
+    //         classe_temperatura = 'cor-alerta perigo-quente';
+    //         console.log("caiu no 1")
+    //     }
+    //     else if (temperatura < limites.muito_quente && temperatura >= limites.quente) {
+    //         classe_temperatura = 'cor-alerta alerta-quente';
+    //         console.log("caiu no 2")
+    //     }
+    //     else if (temperatura < limites.quente && temperatura > limites.frio) {
+    //         classe_temperatura = 'cor-alerta ideal';
+    //         console.log("caiu no 3")
+    //     }
+    //     else if (temperatura <= limites.frio && temperatura > limites.muito_frio) {
+    //         classe_temperatura = 'cor-alerta alerta-frio';
+    //         console.log("caiu no 4")
+    //     }
+    //     else if (temperatura < limites.min_temperatura) {
+    //         classe_temperatura = 'cor-alerta perigo-frio';
+    //         console.log("caiu no 5")
+    //     }
 
-        if (idAquario == 1) {
-            temp_aquario_1.innerHTML = temperatura + "°C";
-            card = card_1
-        } else if (idAquario == 2) {
-            temp_aquario_2.innerHTML = temperatura + "°C";
-            card = card_2
-        } else if (idAquario == 3) {
-            temp_aquario_3.innerHTML = temperatura + "°C";
-            card = card_3
-        } else if (idAquario == 4) {
-            temp_aquario_4.innerHTML = temperatura + "°C";
-            card = card_4
-        }
+    //     var card;
 
-        // alterando
-        card.className = classe_temperatura;
+    //     if (idAquario == 1) {
+    //         temp_aquario_1.innerHTML = temperatura + "°C";
+    //         card = card_1
+    //     } else if (idAquario == 2) {
+    //         temp_aquario_2.innerHTML = temperatura + "°C";
+    //         card = card_2
+    //     } else if (idAquario == 3) {
+    //         temp_aquario_3.innerHTML = temperatura + "°C";
+    //         card = card_3
+    //     } else if (idAquario == 4) {
+    //         temp_aquario_4.innerHTML = temperatura + "°C";
+    //         card = card_4
+    //     }
 
-    }
+    //     // alterando
+    //     card.className = classe_temperatura;
+
+    // }
 
 </script>
 
