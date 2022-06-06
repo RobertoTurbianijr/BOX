@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AcquaTec | Dashboards</title>
+    <title>BOXBOX | Dashboards</title>
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="dashboards.css">
@@ -26,7 +26,7 @@
 
     <div class="janela">
         <div class="header-left">
-            <h1>AcquaTec</h1>
+            <h1>BOXBOX</h1>
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
@@ -34,13 +34,13 @@
 
             <div class="btn-nav-white">
                 <a href="./cards.html">
-                    <h3>Aquários</h3>
+                    <h3>Principal</h3>
                 </a>
             </div>
 
             <div class="btn-nav">
 
-                <h3>Gráficos</h3>
+                <h3>Curiosidades</h3>
 
             </div>
 
@@ -57,13 +57,24 @@
         </div>
 
         <div class="dash">
-            <div class="btns-dash">
+            <!-- <div class="btns-dash"> -->
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
+
+                <div id="div_sorte">
+                    <button onclick="sorte()">Veja quem você é</button>
+                </div>
+                <!-- <button onclick="vote()">Vote no seu piloto</button> -->
+                    <br><br>
+                <div id="div_pesquisa">
+                    <input id="ipt_pesquisa" placeholder="Pesquisar">
+                    <button onclick="pesquisar()">Pesquisar</button>
+                </div>
+<!-- 
                 <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button>
                 <button class="btn-chart btn-white" onclick="obterDadosGrafico(2)">Aquario 2</button>
                 <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">Aquario 3</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">Aquario 4</button>
-            </div>
+                <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">Aquario 4</button> -->
+            <!-- </div> -->
             <div>
                 <h3 class="tituloGraficos">
                     <span id="tituloAquario">123</span>
@@ -76,11 +87,106 @@
     </div>
 
 
+
+
 </body>
 
 </html>
 
 <script>
+
+    function sorte() {
+        
+        Math.random()
+        var ax_random = 20*Math.random()
+
+        
+
+        if (ax_random<=1) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/tsunoda.png" height="150px"></span>'
+        } else if (ax_random<2) {
+            div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/V/VALBOT01_Valtteri_Bottas/valbot01.png.transform/2col/image.png" height="150px"></span>'
+            } else if (ax_random<3) {
+                div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/perez.png" height="150px"></span>'
+                } else if (ax_random<4) {
+                    div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/vettel.png" height="150px"></span>'
+                    } else if (ax_random<5) {
+                        div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/gasly.png" height="150px"></span>'
+                        } else if (ax_random<6) {
+                            div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/N/NICLAF01_Nicholas_Latifi/niclaf01.png.transform/2col/image.png" height="150px"></span>'
+                            } else if (ax_random<7) {
+                                div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/schumacher.png" height="150px"></span>'
+                                } else if (ax_random<8) {
+                                    div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/verstappen.png" height="150px"></span>'
+                                    } else if (ax_random<9) {
+                                        div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/hamilton.png" height="150px"></span>'
+                                        } else if (ax_random<10) {
+                                            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/norris.png" height="150px"></span>'
+                                            } else if (ax_random<11) {
+                                                div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/stroll.png" height="150px"></span>'
+                                                } else if (ax_random<12) {
+                                                    div_sorte.innerHTML = '<span> <img src="https://i.postimg.cc/gJ7CQwgS/mag2.jpg" height="150px"></span>'
+                                                    } else if (ax_random<13) {
+                                                        div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/G/GUAZHO01_Guanyu_Zhou/guazho01.png.transform/2col/image.png" height="150px"></span>'
+                                                       } else if (ax_random<14) {
+                                                        div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/G/GEORUS01_George_Russell/georus01.png.transform/2col/image.png" height="150px"></span>'
+                                                           } else  if (ax_random<15) {
+                                                            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/alonso.png" height="150px"></span>'
+                                                               } else if (ax_random<16) {
+                                                                div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/ocon.png" height="150px"></span>'
+                                                                   } else if (ax_random<17) {
+                                                                    div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/ricciardo.png" height="150px"></span>'
+                                                                       } else if (ax_random<18) {
+                                                                        div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/leclercok.png" height="150px"></span>'
+                                                                           } else if (ax_random<19) {
+                                                                                div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/sainzok.png" height="150px"></span>'
+                                                                               } else {
+                                                                                    div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/A/ALEALB01_Alexander_Albon/alealb01.png.transform/2col/image.png" height="150px"></span>' 
+                                                                               }
+
+    }    
+
+
+
+    function pesquisar() {
+        
+        var ax_pesq = ipt_pesquisa.value
+
+        for (var index = 0; index <= ax_pesq; index++) {
+            if (ax_pesq=='corridas ganhas') {
+                div_pesquisa.innerHTML +=   'sdjfpi'
+            } else {
+                alert ('Selecione uma das opções validas')
+            }
+    
+        }
+
+    }
+
+
+    // var ax_infancia = ipt_idade.value
+
+    //     for (var index = 0; index <=0; index++) {
+            
+            
+    //           if (ax_infancia >=1 && ax_infancia <=4) {
+    //                 span_mensagem.innerHTML += '<br>' + ax_infancia + ' ' + 'anos Primeira Infância'
+    //             } else if (ax_infancia>4 && ax_infancia <=6) {
+    //                     span_mensagem.innerHTML += '<br>' + ax_infancia + ' ' + ' anos (Pré-escolar)'
+    //                 } else  if (ax_infancia >6 && ax_infancia <=10) {
+    //                         span_mensagem.innerHTML += '<br>' + ax_infancia + ' ' + ' Segunda Infância'
+    //                     }  else if (ax_infancia >10 && ax_infancia <=18) {
+    //                         span_mensagem.innerHTML += '<br>' + ax_infancia + ' ' + ' Adolescência'
+    //                     } else if (ax_infancia > 18 && ax_infancia <=50) {
+    //                             span_mensagem.innerHTML += '<br>' + ax_infancia + ' ' + 'Adulto'
+    //                         } else if (ax_infancia >50 && ax_infancia <=100) {
+    //                                 span_mensagem.innerHTML += '<br>' + ax_infancia + ' ' + 'Melhor idade'
+    //                             } else if(ax_infancia > 100) {
+    //                                 span_mensagem.innerHTML += '<br>' + ax_infancia + ' ' + 'Matusalem'
+                        
+    //                     }                    
+                
+            
 
     let proximaAtualizacao;
 
@@ -88,7 +194,7 @@
 
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-    verificar_autenticacao();
+    // verificar_autenticacao();
 
     function alterarTitulo(idAquario) {
         var tituloAquario = document.getElementById("tituloAquario")
@@ -125,9 +231,9 @@
                 console.error('Nenhum dado encontrado ou erro na API');
             }
         })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            });
+            // .catch(function (error) {
+                // console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            // });
     }
 
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
