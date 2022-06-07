@@ -1,42 +1,45 @@
 body{
 
+    background-color: rgba(40, 40, 40, 0.900);    
 }
 
-.campoBotoes{
+.corpo{
 
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: left;
-    background-color: blue;
-}
-
-
-.campo_esquerdo div{
-
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     justify-content: space-evenly;
+
 }
 
-.btn-nav-white{
+.btn{
 
-    width: 10%;
-    
+float: left;
+display: flex;
+justify-content: space-evenly;
+flex-direction: column;
+width: 10%;
+height: 528px;
+background: linear-gradient(180deg, rgb(100, 100, 100) 10%, rgb(50,50,50)100%);
 }
 
-.btn-nav{
+.resultado{
 
-
-    width: 11%;
+    margin-top: 1%;
+    margin-left: 40%;
+    float: left;
 }
 
-.campo_direito{
-    
+.resultado #div_sorte{
+
+    border-radius: 2%;
+    background: rgba(20, 20, 20, 0.800)
+}
+
+.direitaAlto{
+
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     background-color: aqua;
-
+    width: 90%;
+    height: 60px;
 }
