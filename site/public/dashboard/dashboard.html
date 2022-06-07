@@ -56,34 +56,26 @@
 
         </div>
 
-        <div class="dash">
-            <!-- <div class="btns-dash"> -->
-                <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
+        
 
-                <div id="div_sorte">
-                    <button onclick="sorte()">Veja quem você é</button>
-                </div>
-                <!-- <button onclick="vote()">Vote no seu piloto</button> -->
-                    <br><br>
-                <div id="div_pesquisa">
-                    <input id="ipt_pesquisa" placeholder="Pesquisar">
-                    <button onclick="listarPilotos()">listar</button>
-                </div>
-<!-- 
-                <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(2)">Aquario 2</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">Aquario 3</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">Aquario 4</button> -->
-            <!-- </div> -->
-            <div>
-                <h3 class="tituloGraficos">
-                    <span id="tituloAquario">123</span>
-                </h3>
+        <div class="dash">
+
+            <div class="btnSorte">
+                
+            <h3 class="tituloGraficos">
+                <div id="div_sorte"></div>
+            </h3>
+                
+        
+                <button onclick="sorte()">Veja quem você é</button>
+                    <div id="div_lista">
+                        <button onclick="listarPilotos()">listar</button>
+                    </div>
             </div>
-            <div class="graph">
-                <canvas id="canvas_grafico"></canvas>
-            </div>
+
+            
         </div>
+    </div>
     </div>
 
 
@@ -96,95 +88,105 @@
 <script>
 
     function sorte() {
-        
+
+
         Math.random()
-        var ax_random = 20*Math.random()
+        var ax_random = 20 * Math.random()
 
-        
 
-        if (ax_random<=1) {
+
+        if (ax_random <= 1) {
             div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/tsunoda.png" height="150px"></span>'
-        } else if (ax_random<2) {
+        } else if (ax_random < 2) {
             div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/V/VALBOT01_Valtteri_Bottas/valbot01.png.transform/2col/image.png" height="150px"></span>'
-            } else if (ax_random<3) {
-                div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/perez.png" height="150px"></span>'
-                } else if (ax_random<4) {
-                    div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/vettel.png" height="150px"></span>'
-                    } else if (ax_random<5) {
-                        div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/gasly.png" height="150px"></span>'
-                        } else if (ax_random<6) {
-                            div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/N/NICLAF01_Nicholas_Latifi/niclaf01.png.transform/2col/image.png" height="150px"></span>'
-                            } else if (ax_random<7) {
-                                div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/schumacher.png" height="150px"></span>'
-                                } else if (ax_random<8) {
-                                    div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/verstappen.png" height="150px"></span>'
-                                    } else if (ax_random<9) {
-                                        div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/hamilton.png" height="150px"></span>'
-                                        } else if (ax_random<10) {
-                                            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/norris.png" height="150px"></span>'
-                                            } else if (ax_random<11) {
-                                                div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/stroll.png" height="150px"></span>'
-                                                } else if (ax_random<12) {
-                                                    div_sorte.innerHTML = '<span> <img src="https://i.postimg.cc/gJ7CQwgS/mag2.jpg" height="150px"></span>'
-                                                    } else if (ax_random<13) {
-                                                        div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/G/GUAZHO01_Guanyu_Zhou/guazho01.png.transform/2col/image.png" height="150px"></span>'
-                                                       } else if (ax_random<14) {
-                                                        div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/G/GEORUS01_George_Russell/georus01.png.transform/2col/image.png" height="150px"></span>'
-                                                           } else  if (ax_random<15) {
-                                                            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/alonso.png" height="150px"></span>'
-                                                               } else if (ax_random<16) {
-                                                                div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/ocon.png" height="150px"></span>'
-                                                                   } else if (ax_random<17) {
-                                                                    div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/ricciardo.png" height="150px"></span>'
-                                                                       } else if (ax_random<18) {
-                                                                        div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/leclercok.png" height="150px"></span>'
-                                                                           } else if (ax_random<19) {
-                                                                                div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/sainzok.png" height="150px"></span>'
-                                                                               } else {
-                                                                                    div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/A/ALEALB01_Alexander_Albon/alealb01.png.transform/2col/image.png" height="150px"></span>' 
-                                                                               }
-
-    }    
-
-
-
-    function listarPilotos() {
-        
-        var ax_pesq = ipt_pesquisa.value
-
-        function listarpilotos() {
-        fetch("/totens/listarTotem", {
-        method: "GET",
-        headers: {
-        "Content-Type": "application/json",
-      }
-    }).then(async function (resposta) {
-      const containerTotem = document.querySelector(".totens");
-      const totens = await resposta.json();
-      for (let i = 0; i < totens.length; i++) {
-
-        let idTotens = document.createElement("div");
-        console.log(totens[i])
-        idTotens.innerHTML = <span onclick="mostrarTotem(${totens[i].idTotem})">Totem_${totens[i].hostname}</span>;
-
-        containerTotem.appendChild(idTotens);
-      }
-
-    });
-    setTimeout(() => {
-        console.log("foi os totens?")
-    }, 3000);
-  }
-
+        } else if (ax_random < 3) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/perez.png" height="150px"></span>'
+        } else if (ax_random < 4) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/vettel.png" height="150px"></span>'
+        } else if (ax_random < 5) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/gasly.png" height="150px"></span>'
+        } else if (ax_random < 6) {
+            div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/N/NICLAF01_Nicholas_Latifi/niclaf01.png.transform/2col/image.png" height="150px"></span>'
+        } else if (ax_random < 7) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/schumacher.png" height="150px"></span>'
+        } else if (ax_random < 8) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/verstappen.png" height="150px"></span>'
+        } else if (ax_random < 9) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/hamilton.png" height="150px"></span>'
+        } else if (ax_random < 10) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/norris.png" height="150px"></span>'
+        } else if (ax_random < 11) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/stroll.png" height="150px"></span>'
+        } else if (ax_random < 12) {
+            div_sorte.innerHTML = '<span> <img src="https://i.postimg.cc/gJ7CQwgS/mag2.jpg" height="150px"></span>'
+        } else if (ax_random < 13) {
+            div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/G/GUAZHO01_Guanyu_Zhou/guazho01.png.transform/2col/image.png" height="150px"></span>'
+        } else if (ax_random < 14) {
+            div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/G/GEORUS01_George_Russell/georus01.png.transform/2col/image.png" height="150px"></span>'
+        } else if (ax_random < 15) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/alonso.png" height="150px"></span>'
+        } else if (ax_random < 16) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/ocon.png" height="150px"></span>'
+        } else if (ax_random < 17) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/ricciardo.png" height="150px"></span>'
+        } else if (ax_random < 18) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/leclercok.png" height="150px"></span>'
+        } else if (ax_random < 19) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/sainzok.png" height="150px"></span>'
+        } else {
+            div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/A/ALEALB01_Alexander_Albon/alealb01.png.transform/2col/image.png" height="150px"></span>'
+        }
 
     }
+
+
+var ordemPilotos;
+var ordemRandom;
+var randomica;
+        function listarPilotos() {
+            div_lista.innerHTML = "";
+            ordemPilotos = [];
+            ordemRandom = [];
+            fetch("/pilotos/listarPilotos", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            }).then(async function (resposta) {
+                const pilotos = await resposta.json();
+                for (let i = 0; i < pilotos.length; i++) {
+                    randomica = (Math.random() * (pilotos.length - 1) + 1 ).toFixed()
+                    if (ordemRandom.indexOf(randomica) == -1 && ordemRandom.length < 20) {
+                        ordemRandom.push(randomica)
+                        console.log(`${randomica} - ${pilotos[i].nome}`)
+                        ordemPilotos[randomica - 1] = [`Posição: ${randomica} - Piloto: ${pilotos[i].nome}`];
+                        console.log(ordemPilotos)
+                    } else if (ordemRandom.indexOf(randomica) != -1 && ordemRandom.length < 20){
+                        i--;
+                    } else {
+                        i = pilotos.length;
+                        ordemRandom.splice();
+                        ordemPilotos.splice();
+                    }
+                }
+
+                for (let i = 0; i < ordemPilotos.length; i++) {
+                div_lista.innerHTML += `<span>${ordemPilotos[i]}</span> <br>`; 
+            }
+
+            });
+
+            
+        }
+
+
 
 
     // var ax_infancia = ipt_idade.value
 
     //     for (var index = 0; index <=0; index++) {
-            
-            
+
+
     //           if (ax_infancia >=1 && ax_infancia <=4) {
     //                 span_mensagem.innerHTML += '<br>' + ax_infancia + ' ' + 'anos Primeira Infância'
     //             } else if (ax_infancia>4 && ax_infancia <=6) {
@@ -199,10 +201,10 @@
     //                                 span_mensagem.innerHTML += '<br>' + ax_infancia + ' ' + 'Melhor idade'
     //                             } else if(ax_infancia > 100) {
     //                                 span_mensagem.innerHTML += '<br>' + ax_infancia + ' ' + 'Matusalem'
-                        
+
     //                     }                    
-                
-            
+
+
 
     let proximaAtualizacao;
 
@@ -210,12 +212,7 @@
 
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-    // verificar_autenticacao();
-
-    function alterarTitulo(idAquario) {
-        var tituloAquario = document.getElementById("tituloAquario")
-        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idAquario + "</span>"
-    }
+    // verificar_autenticacao(); world
 
     // O gráfico é construído com três funções:
     // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
@@ -247,9 +244,9 @@
                 console.error('Nenhum dado encontrado ou erro na API');
             }
         })
-            // .catch(function (error) {
-                // console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            // });
+        // .catch(function (error) {
+        // console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        // });
     }
 
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
@@ -352,10 +349,10 @@
                     // tirando e colocando valores no gráfico
                     dados.labels.shift(); // apagar o primeiro
                     dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
-                    
+
                     dados.datasets[0].data.shift();  // apagar o primeiro de umidade
                     dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade
-                    
+
                     dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
                     dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
 

@@ -12,6 +12,27 @@ body {
   font-family: "Exo 2", sans-serif;
 }
 
+.sorte{
+
+  margin-left: 30%;
+}
+
+.btnSorte{
+
+  margin-left: 40%;
+  margin-top: 40%;
+  font-size: 16PX;
+  cursor: pointer;
+  width: 10vw;
+  transition:  0.50s;
+}
+
+button:hover {
+  background: rgb(2,200,20);
+  box-shadow: 0 4px 7px rgb(255, 254, 254);
+}
+
+
 .dash-right .avisos .container {
   display: flex;
   flex-direction: column;
@@ -112,7 +133,6 @@ body {
 .dash {
   width: 75%;
   position: relative;
-  top: 0;
   left: 25%;
   background-color: #161618;
 
