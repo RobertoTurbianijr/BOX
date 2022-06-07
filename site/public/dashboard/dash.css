@@ -1,0 +1,42 @@
+body{
+
+}
+
+.campoBotoes{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    background-color: blue;
+}
+
+
+.campo_esquerdo div{
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.btn-nav-white{
+
+    width: 10%;
+    
+}
+
+.btn-nav{
+
+
+    width: 11%;
+}
+
+.campo_direito{
+    
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+
+}

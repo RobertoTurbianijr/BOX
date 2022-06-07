@@ -67,7 +67,7 @@
                     <br><br>
                 <div id="div_pesquisa">
                     <input id="ipt_pesquisa" placeholder="Pesquisar">
-                    <button onclick="pesquisar()">Pesquisar</button>
+                    <button onclick="listarPilotos()">listar</button>
                 </div>
 <!-- 
                 <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button>
@@ -148,18 +148,34 @@
 
 
 
-    function pesquisar() {
+    function listarPilotos() {
         
         var ax_pesq = ipt_pesquisa.value
 
-        for (var index = 0; index <= ax_pesq; index++) {
-            if (ax_pesq=='corridas ganhas') {
-                div_pesquisa.innerHTML +=   'sdjfpi'
-            } else {
-                alert ('Selecione uma das opções validas')
-            }
-    
-        }
+        function listarpilotos() {
+        fetch("/totens/listarTotem", {
+        method: "GET",
+        headers: {
+        "Content-Type": "application/json",
+      }
+    }).then(async function (resposta) {
+      const containerTotem = document.querySelector(".totens");
+      const totens = await resposta.json();
+      for (let i = 0; i < totens.length; i++) {
+
+        let idTotens = document.createElement("div");
+        console.log(totens[i])
+        idTotens.innerHTML = <span onclick="mostrarTotem(${totens[i].idTotem})">Totem_${totens[i].hostname}</span>;
+
+        containerTotem.appendChild(idTotens);
+      }
+
+    });
+    setTimeout(() => {
+        console.log("foi os totens?")
+    }, 3000);
+  }
+
 
     }
 
