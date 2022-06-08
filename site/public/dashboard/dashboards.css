@@ -135,13 +135,6 @@ button:hover {
   position: relative;
   left: 25%;
   background-color: #161618;
-
-  /* width: 75%;
-    display: flex;
-    background-color: #161618;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;*/
   height: 100vh;
 }
 
