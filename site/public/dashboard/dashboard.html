@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOXBOX | Dashboards</title>
+
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <!-- <link rel="stylesheet" href="dashboards.css"> -->
+    <link rel="stylesheet" href="dash.css">
+    <script src="../js/funcoes.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- scripts do Chart.js -->
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+
+</head>
+
+<body onload="validarSessao()">
+
+    <div>
+        <div id="div_esquerda">
+            <h1 style="color: white;">BOXBOX</h1>
+
+            <div class="hello">
+                <h3 style="color: white;">Olá, <span style="color: white;" id="b_usuario">usuário</span>!</h3>
+            </div>
+
+            <div class="btn">
+
+
+                <div id="div_principal">
+                    <a style="color: white;" href="cards.html">
+                        <h3>Pincipal</h3>
+                </div>
+
+                <div id="div_cur">
+                    <a style="color: white;" href="./dashboard.html">
+                        <h3>Extras</h3>
+                    </a>
+                </div>
+
+                <div>
+                    <a style="color: white;" href="#">
+                        <h3 onclick="sorte()">Quem você é ?</h3>
+                </div>
+
+                <div>
+                    <a style="color: white;" href="#">
+                        <h3 onclick="listarPilotos()">Grid</h3>
+                </div>
+
+
+                <div style="display: none;">
+                    <a style="color: white;" href="cards.html">
+                        <h4></h4>
+                    </a>
+
+                </div>
+
+                <div id="div_sair" onclick="limparSessao()">
+                    <h3><a style="color: white;" href="#">Sair</a></h3>
+                </div>
+            </div>
+            <div class="direitaAlto">
+                <h5>Total de Pilotos: 20</h5>
+                <br>
+                <h5>Total de Pistas:22</h5>
+                <br>
+                <h5>Total de Equipes:10</h5>
+                <br>
+            </div>
+
+            <div id="div_direita" class="resultado">
+
+                <div>
+                    <div id="div_sorte">
+
+                    </div>
+
+                </div>
+
+
+                <div id="div_lista">
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    function sorte() {
+
+
+        Math.random()
+        var ax_random = 20 * Math.random()
+
+
+
+        if (ax_random <= 1) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/tsunoda.png" height="200px"></span>'
+        } else if (ax_random < 2) {
+            div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/V/VALBOT01_Valtteri_Bottas/valbot01.png.transform/2col/image.png" height="200px"></span>'
+        } else if (ax_random < 3) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/perez.png" height="200px"></span>'
+        } else if (ax_random < 4) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/vettel.png" height="200px"></span>'
+        } else if (ax_random < 5) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/gasly.png" height="200px"></span>'
+        } else if (ax_random < 6) {
+            div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/N/NICLAF01_Nicholas_Latifi/niclaf01.png.transform/2col/image.png" height="200px"></span>'
+        } else if (ax_random < 7) {
+
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/schumacher.png" height="200px"></span>'
+        } else if (ax_random < 8) {
+
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/verstappen.png" height="200px"></span>'
+        } else if (ax_random < 9) {
+
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/hamilton.png" height="200px"></span>'
+        } else if (ax_random < 10) {
+
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/norris.png" height="200px"></span>'
+        } else if (ax_random < 11) {
+
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/stroll.png" height="200px"></span>'
+        } else if (ax_random < 12) {
+
+            div_sorte.innerHTML = '<span> <img src="https://i.postimg.cc/gJ7CQwgS/mag2.jpg" height="200px"></span>'
+        } else if (ax_random < 13) {
+
+            div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/G/GUAZHO01_Guanyu_Zhou/guazho01.png.transform/2col/image.png" height="200px"></span>'
+        } else if (ax_random < 14) {
+
+            div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/G/GEORUS01_George_Russell/georus01.png.transform/2col/image.png" height="200px"></span>'
+        } else if (ax_random < 15) {
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/alonso.png" height="200px"></span>'
+        } else if (ax_random < 16) {
+
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/ocon.png" height="200px"></span>'
+        } else if (ax_random < 17) {
+
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/ricciardo.png" height="200px"></span>'
+        } else if (ax_random < 18) {
+
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/leclercok.png" height="200px"></span>'
+        } else if (ax_random < 19) {
+
+            div_sorte.innerHTML = '<span> <img src="https://pubimg.band.uol.com.br/Files/sainzok.png" height="200px"></span>'
+        } else {
+            div_sorte.innerHTML = '<span> <img src="https://www.formula1.com/content/dam/fom-website/drivers/A/ALEALB01_Alexander_Albon/alealb01.png.transform/2col/image.png" height="200px"></span>'
+        }
+
+    }
+
+
+    var ordemPilotos;
+    var ordemRandom;
+    var randomica;
+    function listarPilotos() {
+        div_lista.innerHTML = "";
+        ordemPilotos = [];
+        ordemRandom = [];
+        fetch("/pilotos/listarPilotos", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        }).then(async function (resposta) {
+            const pilotos = await resposta.json();
+            for (let i = 0; i < pilotos.length; i++) {
+                randomica = (Math.random() * (pilotos.length - 1) + 1).toFixed()
+                if (ordemRandom.indexOf(randomica) == -1 && ordemRandom.length < 20) {
+                    ordemRandom.push(randomica)
+                    console.log(`${randomica} - ${pilotos[i].nome}`)
+                    ordemPilotos[randomica - 1] = [`Posição: ${randomica} - Piloto: ${pilotos[i].nome}`];
+                    console.log(ordemPilotos)
+                } else if (ordemRandom.indexOf(randomica) != -1 && ordemRandom.length < 20) {
+                    i--;
+                } else {
+                    i = pilotos.length;
+                    ordemRandom.splice();
+                    ordemPilotos.splice();
+                }
+            }
+
+            for (let i = 0; i < ordemPilotos.length; i++) {
+                div_lista.innerHTML += `<span>${ordemPilotos[i]}</span> <br>`;
+            }
+
+        });
+
+
+    }
+
+
+
+
+</script>
